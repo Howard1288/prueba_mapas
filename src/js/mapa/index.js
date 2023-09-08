@@ -25,24 +25,24 @@ const carreteraLayer = L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/
 
 const markerLayer = L.layerGroup();
 const icono = L.icon({
-    iconUrl : './images/cit.png',
+    iconUrl : './images/icon.png',
     iconSize : [35, 35]
 })
 
-const marcador = L.marker([15.52,-90.32],{
-    icon : icono,
-    draggable : true
-})
+// const marcador = L.marker([15.52,-90.32],{
+//     icon : icono,
+//     draggable : true
+// })
 
-const iconoPorDefecto = L.Icon.Default();
+// const iconoPorDefecto = L.Icon.Default();
 
 L.circle([15.52,-90.32], {radius: 5000}).addTo(markerLayer);
 const popup = L.popup()
     .setLatLng([15.52,-90.32])
     .setContent('<p>Hello world!<br />This is a nice popup.</p>')
 
-marcador.bindPopup(popup)
-marcador.addTo(markerLayer)
+// marcador.bindPopup(popup)
+// marcador.addTo(markerLayer)
 
 var latlngs = [
     [45.51, -122.68],
